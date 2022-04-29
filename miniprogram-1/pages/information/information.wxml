@@ -1,0 +1,44 @@
+<!--pages/information/information.wxml-->
+
+<view style="background-color: #ffffff; border-radius: 50rpx; margin-top: 2px;">
+    <view style="font-size:20px; text-align: center;width:50%;margin-left: 25%;">个人信息修改</view>
+    <view style="margin-left: 2vw; font-size: 15px;display: flex;margin-top: 10px;">
+        <text style="width: 25%;">姓名 :</text>
+        <input type="text" style="width: 75%;" value="{{selfname}}" placeholder="姓名不可为空" bindinput="nameinput"></input>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <picker style="width:100%;" bindchange="LeiXinginput" value="{{index}}" range="{{array}}">
+            <view style="color: black;display: flex;flex-direction: row;">
+                <view style="width:25%">性别 :</view>
+                <text style="color: black;width: 75%;">{{array[index]}}</text>
+            </view>
+        </picker>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">电话 :</text>
+        <input type="text" style="width: 75%;" value="{{phone}}" placeholder="请输入电话号码（可不输入）" bindinput="phoneinput"></input>
+    </view>
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">邮箱 :</text>
+        <input type="text" style="width: 75%;" value="{{mail}}" placeholder="请输入邮箱（可不输入）" bindinput="mailinput"></input>
+    </view>
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">QQ :</text>
+        <input type="text" style="width: 75%;" value="{{qq}}" placeholder="请输入QQ（可不输入）" bindinput="qqinput"></input>
+    </view>
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">班级 :</text>
+        <input type="text" style="width: 75%;" value="{{class}}" placeholder="请输入班级（可不输入）" bindinput="classinput"></input>
+    </view>
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <picker style="width:100%;" bindchange="xueyuaninput" value="{{index_2}}" range="{{array_2}}">
+            <view style="color: black;display: flex;flex-direction: row;">
+                <view style="width:25%">学院 :</view>
+                <text style="color: black;width: 75%;">{{array_2[index_2]}}</text>
+            </view>
+        </picker>
+    </view>
+</view>
+<button style="margin-top: 20px;" type="primary" bindtap="xiugai">修改</button>

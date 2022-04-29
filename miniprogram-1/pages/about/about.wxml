@@ -1,0 +1,6 @@
+<!--pages/about/about.wxml-->
+<navigator class="event" url="../agreement/agreement" open-type="navigate">
+<image class="lo" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E7%BA%A6%E5%AE%9A.png?sign=696ea93d572a050411301739af7ea9cb&t=1650531200" ></image>
+<view class="text">平台公约</view>
+<image class="big" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E5%89%8D%E5%BE%80.png?sign=0cbe281be033a1c48e6234651e6e028b&t=1650531064"></image>
+</navigator>

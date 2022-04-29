@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/demo1",
+    "pages/demo3/demo3",
+    "pages/information/information",
+    "pages/FaBu/FaBu",
+    "pages/find/find",
+    "pages/search/search",
+    "pages/about/about",
+    "pages/agreement/agreement",
+    "pages/map/map"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e0f00a",
+    "navigationBarTitleText": "地大通",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/demo1",
+      "text": "主页",
+      "iconPath": "resourse/home.png",
+      "selectedIconPath": "resourse/home_clicked.png"
+    },
+  {
+    "pagePath": "pages/demo3/demo3",
+      "text": "我的",
+      "iconPath": "resourse/my.png",
+      "selectedIconPath": "resourse/my_clicked.png"
+  }
+  ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

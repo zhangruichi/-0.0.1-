@@ -1,0 +1,70 @@
+<!--pages/find/find.wxml-->
+<wxs src="../find/find.wxs" module="todate" />
+
+
+<button class="btn1" style=" width: 90vw;height: 9vw;" bindtap="btn1_tap">点 此 查 找</button>
+
+
+<view class="topView" style="padding-top: 8px;left:0;z-index:200">
+    <block wx:for="{{statusList}}" wx:key="id">
+        <view id="{{item.id}}" class="{{item.id == isChecked ? 'active':''}} topChild" bindtap="choiceStatus">{{item.statusName}}</view>
+    </block>
+</view>
+
+
+<button plain="true" style=" position: fixed; top: 80vh;left: 3vw; width: 150rpx;height: 150rpx; border: none;" bindtap="fabubtn_tap">
+    <image src="../img/fabuimg.png" style="position: absolute; width: 150rpx;height: 150rpx; left: 0; top: 0;"></image>
+</button>
+<view style="height: 10px;"></view>
+<view wx:for="{{list}}" wx:key="index">
+    <view wx:if="{{isChecked=='all'}}" style="display: flex; border-radius: 8px; margin-top: 3px; border:2px solid #70bcf6">
+        <view style="width: 40%;">
+            <image wx:if="{{!item.type}}" src="../img/lost.png" style="width: 100%; height: 100%;"></image>
+            <image wx:if="{{item.type}}" src="../img/lin.png" style="width: 100%; height: 100%;"></image>
+        </view>
+        <view style="width: 60%;" wx:if="{{item.type}}">
+            <view>物品名:{{item.item_name}}</view>
+            <view>失主称呼:{{item.name}}</view>
+            <view>联系方式:{{item.contact}}</view>
+            <view>丢失位置:{{item.location}}</view>
+            <view>丢失日期:{{todate.formatDate(item.releaseDate)}}</view>
+            <view>描述:{{item.description}}</view>
+        </view>
+        <view style="width: 60%;" wx:if="{{!item.type}}">
+            <view>物品名:{{item.item_name}}</view>
+            <view>拾主称呼:{{item.name}}</view>
+            <view>联系方式:{{item.contact}}</view>
+            <view>拾取位置:{{item.location}}</view>
+            <view>拾取日期:{{todate.formatDate(item.releaseDate)}}</view>
+            <view>描述:{{item.description}}</view>
+        </view>
+    </view>
+    <view wx:elif="{{isChecked=='lost'&&!item.type}}" style="display: flex; border-radius: 8px; margin-top: 3px; border:2px solid #70bcf6">
+        <view style="width: 40%;">
+            <image wx:if="{{!item.type}}" src="../img/lost.png" style="width: 100%; height: 100%;"></image>
+            <image wx:if="{{item.type}}" src="../img/lin.png" style="width: 100%; height: 100%;"></image>
+        </view>
+        <view style="width: 60%;">
+            <view>物品名:{{item.item_name}}</view>
+            <view>失主称呼:{{item.name}}</view>
+            <view>联系方式:{{item.contact}}</view>
+            <view>丢失位置:{{item.location}}</view>
+            <view>丢失日期:{{todate.formatDate(item.releaseDate)}}</view>
+            <view>描述:{{item.description}}</view>
+        </view>
+    </view>
+    <view wx:elif="{{isChecked=='find'&&item.type}}" style="display: flex; border-radius: 8px; margin-top: 3px; border:2px solid #70bcf6">
+        <view style="width: 40%;">
+            <image wx:if="{{!item.type}}" src="../img/lost.png" style="width: 100%; height: 100%;"></image>
+            <image wx:if="{{item.type}}" src="../img/lin.png" style="width: 100%; height: 100%;"></image>
+        </view>
+        <view style="width: 60%;">
+            <view>物品名:{{item.item_name}}</view>
+            <view>拾主称呼:{{item.name}}</view>
+            <view>联系方式:{{item.contact}}</view>
+            <view>拾取位置:{{item.location}}</view>
+            <view>拾取日期:{{todate.formatDate(item.releaseDate)}}</view>
+            <view>描述:{{item.description}}</view>
+        </view>
+    </view>
+</view>

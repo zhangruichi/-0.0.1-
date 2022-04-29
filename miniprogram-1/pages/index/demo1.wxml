@@ -1,0 +1,44 @@
+<view class="bottom">
+<view class="con">
+<view class="row">
+<navigator class="na" style="opacity: 0.9;" url="../find/find"> 
+<image src="../../resourse/lostfind.png" class="pic"></image>
+<view class="char">失物招领</view>
+</navigator>
+<navigator class="na_2" style="opacity: 0.9;"> 
+<image src="../../resourse/sec.png" class="pic"></image>
+<view class="char">二手交易</view>
+</navigator>
+</view>
+<view class="row">
+<navigator class="na" style="opacity: 0.9;background-color:#976adf;"> 
+<image src="../../resourse/note.png" class="pic"></image>
+<view class="char">笔记分享</view>
+</navigator>
+<navigator class="na_2" style="opacity: 0.9;background-color: #a4df5f;"> 
+<image src="../../resourse/shejiao.png" class="pic"></image>
+<view class="char">社交互动</view>
+</navigator>
+</view>
+<view class="row">
+<navigator class="na" style="opacity: 0.9;background-color: #bf7082;" url="../information/information"> 
+<image src="../../resourse/xuanshang.png" class="pic"></image>
+<view class="char">悬赏功能</view>
+</navigator>
+<navigator class="na_2" style="opacity: 0.9;background-color: #da8439;"> 
+<image src="../../resourse/que.png" class="pic"></image>
+<view class="char">问题讨论</view>
+</navigator>
+</view>
+<view class="row">
+<navigator class="na" style="opacity: 0.9;background-color: #fd7472;"> 
+<image src="../../resourse/com.png" class="pic"></image>
+<view class="char">竞赛信息</view>
+</navigator>
+<navigator class="na_2" style="opacity: 0.9;background-color:chocolate;" url="../map/map"> 
+<image src="../../resourse/stu.png" class="pic"></image>
+<view class="char">新生帮助</view>
+</navigator>
+</view>
+</view>
+</view>

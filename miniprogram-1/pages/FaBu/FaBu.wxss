@@ -1,0 +1,4 @@
+/* pages/FaBu/FaBu.wxss */
+page{
+    background-color: #e6e6e6;
+}
