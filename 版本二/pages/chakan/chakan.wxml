@@ -1,0 +1,26 @@
+<!--pages/chakan/chakan.wxml-->
+<navigator class="event" url="../com/com" open-type="navigate">
+<image class="lo" src="../../resourse/lostfind.png" ></image>
+<view class="text" style="margin-left: 7%;">查看发布的失物招领</view>
+<image class="big" ></image>
+</navigator>
+<navigator class="event_2" url="../chakan_2/chakan_2">
+<image class="lo" src="../../resourse/sec.png" ></image>
+<view class="text" style="margin-left: 7%;">查看发布的二手交易</view>
+<image class="big" ></image>
+</navigator>
+<navigator class="event" url="../chakan_3/chakan_3" open-type="navigate" style="top:24%;background-color:rgb(112, 112, 15);">
+<image class="lo" src="../../resourse/xuanshang.png" ></image>
+<view class="text" style="margin-left: 7%;">查看发布的(未被接取)的悬赏</view>
+<image class="big" ></image>
+</navigator>
+<navigator class="event" url="../chankan_4/chakan_4" open-type="navigate" style="top:36%;background-color:rgb(180, 207, 82);">
+<image class="lo" src="../../resourse/xuanshang.png" ></image>
+<view class="text" style="margin-left: 7%;">查看发布的(已被接取)的悬赏</view>
+<image class="big" ></image>
+</navigator>
+<navigator class="event" url="../chakan_5/chakan_5" open-type="navigate" style="top:48%;background-color:rgb(86, 195, 228);">
+<image class="lo" src="../../resourse/xuanshang.png" ></image>
+<view class="text" style="margin-left: 7%;">查看接取的悬赏</view>
+<image class="big" ></image>
+</navigator>

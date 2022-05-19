@@ -1,0 +1,35 @@
+<view class='text'>任务信息</view>
+
+<view>
+  <input class='bk' placeholder="请输入任务信息" bindinput='bindKeyInput'></input>
+</view>
+<view class='text'>称呼</view>
+
+<view>
+  <input class='bk' placeholder="请输入称呼" bindinput='bindKeyInput1'></input>
+</view>
+<view class='text'>联系方式</view>
+<view>
+  <input class='bk' placeholder="请输入联系方式" bindinput='bindKeyInput2'></input>
+</view>
+<view class='text'>悬赏金额</view>
+<view class="bk" style="display:flex;">
+<text decode="{{true}}">¥&nbsp;&nbsp;</text>
+<input placeholder="请输入悬赏金额" bindinput='bindKeyInput3' type="digit" value="{{val}}">{{val}}</input>
+</view>
+<view class="text">悬赏类型</view>
+<view>
+  <picker bindchange="bindchange" value="{{index}}" range="{{arr}}">
+    <view class="bk">
+      <text>{{arr[index]}}</text>
+    </view>
+  </picker>
+</view>
+<button class='btn' bindtap="fabutap">发布</button>
+
+<wxs module="util">
+  var sub1 = function (val) {
+    return val.substring(0, 10)
+  }
+  module.exports.sub1 = sub1;
+</wxs>

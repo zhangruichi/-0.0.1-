@@ -1,0 +1,11 @@
+<!--pages/about/about.wxml-->
+<navigator class="event" url="../agreement/agreement" open-type="navigate">
+<image class="lo" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E7%BA%A6%E5%AE%9A.png?sign=696ea93d572a050411301739af7ea9cb&t=1650531200" ></image>
+<view class="text" style="margin-left: 7%;">平台公约</view>
+<image class="big" ></image>
+</navigator>
+<button open-type="contact" style="width:100%;height:10%;display:flex;flex-direction: row;background-color: rgb(255,255,255);border-radius:5px;text-align: center;align-items: center;position:fixed;top:10%;padding-left: 0%;background-color: #50e690;">
+<image class="lo" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E5%AE%A2%E6%9C%8D%E7%94%B5%E8%AF%9D%20(1).png?sign=d170774874deff8a58170db9460cb160&t=1652329112"></image>
+<view class="text" style="margin-left: 10%;">客服会话</view>
+<image class="big" ></image>
+</button>

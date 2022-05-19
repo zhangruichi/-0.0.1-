@@ -1,0 +1,50 @@
+<!--pages/demo3/demo3.wxml-->
+<view style="height: 100%;width: 100%;background-color: #f4f4f4;">
+  <view class="user_info_wrap">
+    <view wx:if="{{userimage}}" class="user_img_wrap">
+      <image class="user_bg" src="{{userimage}}"></image>
+      <view class="user_info" bindtap="doUpload">
+        <image class="user_icon" src="{{userimage}}"></image>
+        <view class="user_name">{{tmpname}}</view>
+      </view>
+    </view>
+    <view wx:else class="user_btn">
+      <button class="use" url="/pages/login/index" plain bindtap="handlelogin">登录</button>
+    </view>
+    <view class="order" style="width: 70%; height: 12%; display: flex; box-sizing: border-box; left: 86rpx; top: 500rpx">
+      <navigator class="desc">
+        <view>
+          <image src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E6%88%91%E7%9A%84%E5%B8%96%E5%AD%90.png?sign=5e353c8a669ddc048d55d15facbc2197&t=1649588441" style="width: 70px;height: 40px;"></image>
+        </view>
+        <view>收藏的资料</view>
+      </navigator>
+      <navigator class="desc">
+        <view>
+          <image src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E6%96%B0%E5%BB%BA%E5%B8%96%E5%AD%90.png?sign=8f16d2b495610717d266e6098b74fa44&t=1649588809" style="width: 45px;height: 40px;"></image>
+        </view>
+        <view>收藏的帖子</view>
+      </navigator>
+    </view>
+    <navigator class="event" url="../information/information" open-type="navigate">
+      <image class="lo" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99.png?sign=d316ffae6eaa6e98bf6a324b84c6a728&t=1649592399"></image>
+      <view class="text">修改个人资料</view>
+      <image class="big" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E5%89%8D%E5%BE%80.png?sign=0cbe281be033a1c48e6234651e6e028b&t=1650531064"></image>
+    </navigator>
+    <navigator class="event_2" url="../message/message">
+      <image class="lo" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E9%82%AE%E7%AE%B1.png?sign=0071a68286892ece375ecdd711f080bc&t=1649594003"></image>
+      <view class="text">查看我的消息</view>
+      <image class="big" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E5%89%8D%E5%BE%80.png?sign=0cbe281be033a1c48e6234651e6e028b&t=1650531064"></image>
+    </navigator>
+    <navigator class="event_3" url="../chakan/chakan">
+      <image class="lo" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E5%8F%91%E5%B8%83%E8%89%B2%E5%9D%97.png?sign=bfb2aa0ff870a0fc8456c4d225770a35&t=1649594408"></image>
+      <view class="text">查看我的发布</view>
+      <image class="big" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E5%89%8D%E5%BE%80.png?sign=0cbe281be033a1c48e6234651e6e028b&t=1650531064"></image>
+    </navigator>
+    <navigator class="event_4" url="../about/about">
+      <image class="lo" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC.png?sign=2c53988df16a9d5fe4e60611d4e4fecf&t=1649594784"></image>
+      <view class="text">关于我们</view>
+      <image class="big2" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E5%89%8D%E5%BE%80.png?sign=0cbe281be033a1c48e6234651e6e028b&t=1650531064"></image>
+    </navigator>
+    
+  </view>
+</view>

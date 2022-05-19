@@ -1,0 +1,62 @@
+<!--pages/FaBu/FaBu.wxml-->
+<view style="background-color: #ffffff; border-radius: 50rpx;margin-top: 2px">
+    <view style="font-size:15px; text-align: center;">内容描述</view>
+    <textarea style="width:100%;height: 20vh;margin-top:1rpx;" maxlength="1000" bindinput="descriptioninput" placeholder="请输入内容描述（最多1000字）"></textarea>
+    <view style="height: 4vh;"></view>
+</view>
+
+<view style="background-color: #ffffff; border-radius: 50rpx; margin-top: 2px;">
+    <view style="font-size:15px; text-align: center;">信息填写</view>
+    <view style="margin-left: 2vw; font-size: 15px;display: flex;margin-top: 10px;">
+        <text style="width: 25%;">物品 :</text>
+        <input type="text" style="width: 75%;" placeholder="请输入遗失(拾取)的物品名" bindinput="item_nameinput"></input>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">地点 :</text>
+        <input type="text" style="width: 75%;" placeholder="请输入遗失(拾取)的地点" bindinput="locationinput"></input>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">称呼 :</text>
+        <input type="text" style="width: 75%;" placeholder="请输入称呼" bindinput="nameinput"></input>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">联系方式 :</text>
+        <input type="number" style="width: 75%;" placeholder="请输入联系方式" bindinput="contactinput"></input>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <picker mode="date" value="{{currentDate}}" start="2011-01-01" end="2022-5-19" bindchange="bindDateChange">
+            <view style="color: black;">
+                请选择时间 :
+                <text style="color: black;">{{currentDate}}</text>
+            </view>
+        </picker>
+    </view>
+
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <picker bindchange="LeiXinginput" value="{{index}}" range="{{array}}">
+            <view style="color: black;">
+                请选择类型 :
+                <text style="color: black;">{{array[index]}}</text>
+            </view>
+        </picker>
+    </view>
+    <view class="img_box">
+        <view class="imgs" wx:for="{{tempFilePaths}}" wx:key="index">
+            <image src='{{item}}' bindlongpress="deleteImage" bindtap="listenerButtonPreviewImage" data-index="{{index}}" mode='widthFix' />
+        </view>
+        <view class="imgs">
+            <view class="images" bindtap="upload">
+                <image src='https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87.png?sign=21a869cfb11264ae83cfaf8f11ceeaa0&t=1652754981' mode='widthFix' />
+            </view>
+        </view>
+    </view>
+
+    <view style="height: 4vh;"></view>
+
+</view>
+<button style="margin-top: 20px;" type="primary" bindtap="fabutap">发布</button>

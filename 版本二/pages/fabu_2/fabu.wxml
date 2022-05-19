@@ -1,0 +1,46 @@
+<view class='text'>商品信息</view>
+
+<view>
+  <input class='bk' placeholder="请输入商品信息" bindinput='bindKeyInput'></input>
+</view>
+<view class='text'>称呼</view>
+
+<view>
+  <input class='bk' placeholder="请输入称呼" bindinput='bindKeyInput1'></input>
+</view>
+<view class='text'>联系方式</view>
+<view>
+  <input class='bk' placeholder="请输入联系方式" bindinput='bindKeyInput2'></input>
+</view>
+<view class='text'>商品价格</view>
+<view class="bk" style="display:flex;">
+<text decode="{{true}}">¥&nbsp;&nbsp;</text>
+<input placeholder="请输入商品价格" bindinput='bindKeyInput3' type="digit" value="{{val}}">{{val}}</input>
+</view>
+<view class="text">商品类型</view>
+<view>
+  <picker bindchange="bindchange" value="{{index}}" range="{{arr}}">
+    <view class="bk">
+      <text>{{arr[index]}}</text>
+    </view>
+  </picker>
+</view>
+<view class='text'>商品图片</view>
+<view class="img_box">
+        <view class="imgs" wx:for="{{tempFilePaths}}" wx:key="index">
+            <image src='{{item}}' bindlongpress="deleteImage" bindtap="listenerButtonPreviewImage" data-index="{{index}}" mode='widthFix' />
+        </view>
+        <view class="imgs">
+            <view class="images" bindtap="upload">
+                <image src='https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87.png?sign=21a869cfb11264ae83cfaf8f11ceeaa0&t=1652754981' mode='widthFix' />
+            </view>
+        </view>
+    </view>
+<button class='btn' bindtap="fabutap">发布</button>
+
+<wxs module="util">
+  var sub1 = function (val) {
+    return val.substring(0, 10)
+  }
+  module.exports.sub1 = sub1;
+</wxs>
