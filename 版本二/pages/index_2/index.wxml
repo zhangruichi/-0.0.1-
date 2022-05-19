@@ -1,0 +1,29 @@
+
+<button class="btn1" style=" width: 90vw;height: 9vw; margin-top: 1%;" bindtap="searchtap">点 此 查 找</button>
+
+<view class="school_help">
+  <scroll-view scroll-x class='swiper-nav' scroll-left='{{swiperNav.x}}' scroll-with-animation='true' bindtap='swiperNav'>
+    　<text wx:for='{{swiperNav.arr}}' wx:key='{{index}}' class='item-nav {{swiperNav.i==index ? "active" : ""}}' data-i='{{index}}'>{{item.txt}}</text>
+  </scroll-view>
+</view>
+
+
+
+<view wx:for="{{list}}" wx:key="index">
+  <view wx:if="{{choose==item.type}}" style="display: flex; border-radius: 8px; margin-top: 3px; border:2px solid #f43838" data-id="{{item}}" bindtap="taplist">
+    <view style="width: 60%;">
+            <view>商品信息 ：{{item.info}}</view>
+            <view>卖主称呼 ：{{item.name}}</view>
+            <view>联系方式 ：{{item.contact}}</view>
+    </view>
+    <view style="width: 40%;font-size: 60rpx;color:#f43838 ;display: flex; align-items: center;">
+      <view>¥{{item.value}}</view>
+    </view>
+  </view>
+</view>
+
+<movable-area>
+  <movable-view x="{{x}}" y="{{y}}" direction="all" bindtap="transmit">
+    <image src="{{imgUrl}}" mode="widthFix" style="width:60rpx;height:auto"></image>
+  </movable-view>
+</movable-area>

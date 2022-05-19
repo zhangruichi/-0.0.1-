@@ -1,0 +1,47 @@
+<!--pages/person/person.wxml-->
+<view style="height: 100%;width: 100%;background-color: #f4f4f4;">
+  <view class="user_info_wrap">
+    <view class="user_img_wrap">
+      <image class="user_bg" src="{{pic}}"></image>
+      <view class="user_info" >
+        <image class="user_icon" src="{{pic}}" bindtap="tiaozhuan"></image>
+        <view class="user_name">{{name}}</view>
+        <view style="color: rgb(255, 255, 255); font-size: 30px;">发布者</view>
+      </view>
+    </view>
+    </view>
+    </view>
+    <view style="background-color: #e6e6e6; border-radius: 50rpx; margin-top: 2px;">
+    <view style="font-size:15px; text-align: center;">信息</view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">性别 :</text>
+        <view  style="width: 75%;">{{array[gender]}}</view>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">电话 :</text>
+        <view style="width: 75%;" >{{telephone}}</view>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">邮箱 :</text>
+        <view style="width: 75%;">{{email}}</view>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">qq :</text>
+        <view style="width: 75%;">{{qq}}</view>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">班级 :</text>
+        <view style="width: 75%;">{{class}}</view>
+    </view>
+
+    <view style="margin-left: 2vw; font-size: 15px;display: flex; margin-top: 10px;">
+        <text style="width: 25%;">学院 :</text>
+        <view style="width: 75%;">{{array_2[xueyuan]}}</view>
+    </view>
+</view>
+<button style="background-color: rgb(30, 172, 30);margin-top:10%;" bindtap="faxiaoxi">给他(她)发消息</button>

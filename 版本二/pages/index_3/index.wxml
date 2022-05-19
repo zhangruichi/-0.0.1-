@@ -1,0 +1,28 @@
+<button class="btn1" style=" width: 90vw;height: 9vw; margin-top: 1%;" bindtap="searchtap">点 此 查 找</button>
+
+<view class="school_help">
+  <scroll-view scroll-x class='swiper-nav' scroll-left='{{swiperNav.x}}' scroll-with-animation='true' bindtap='swiperNav' style="padding-left: 13%;">
+    　<text wx:for='{{swiperNav.arr}}' wx:key='{{index}}' class='item-nav {{swiperNav.i==index ? "active" : ""}}' data-i='{{index}}'>{{item.txt}}</text>
+  </scroll-view>
+</view>
+
+
+
+<view wx:for="{{list}}" wx:key="index">
+  <view wx:if="{{choose==item.type&&item.zhuangtai==1}}" style="display: flex; border-radius: 8px; margin-top: 3px; border:2px solid #b77388" data-id="{{item}}" bindtap="jiequ">
+    <view style="width: 60%;">
+      <view>悬赏者称呼 ：{{item.name}}</view>
+      <view><text>联系方式 ：</text>{{item.contact}}</view>
+      <view style="width: 95%; color: #8bc34a;border:2px solid #8bc34a;border-radius: 10px;padding-left: 5%;"><text style="font-size: 20px; margin-left: 10%;">↓任务信息↓\n</text>{{item.info}}</view>
+    </view>
+    <view style="width: 40%;font-size: 60rpx;color:#b77388 ;display: flex; align-items: center;">
+      <view>悬赏金额：¥{{item.value}}</view>
+    </view>
+  </view>
+</view>
+
+<movable-area>
+  <movable-view x="{{x}}" y="{{y}}" direction="all" bindtap="transmit">
+    <image src="{{imgUrl}}" mode="widthFix" style="width:60rpx;height:auto"></image>
+  </movable-view>
+</movable-area>

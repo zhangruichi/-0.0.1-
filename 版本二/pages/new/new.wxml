@@ -1,0 +1,11 @@
+<!--pages/new/new.wxml-->
+<navigator class="event" url="../map/map" open-type="navigate">
+<image class="lo" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E5%9C%B0%E5%9B%BE.png?sign=7411a4b6bf719e60f8c5210aa0f2033e&t=1652526713" ></image>
+<view class="text" style="margin-left: 7%;">校园地图</view>
+<image class="big" ></image>
+</navigator>
+<navigator class="event_2" bindtap="goshetuan">
+<image class="lo" src="https://656e-env-3gn8mpr00af80a85-1310746494.tcb.qcloud.la/resourse/resourse/%E7%BA%A6%E5%AE%9A.png?sign=696ea93d572a050411301739af7ea9cb&t=1650531200" ></image>
+<view class="text" style="margin-left: 7%;">社团推荐</view>
+<image class="big" ></image>
+</navigator>

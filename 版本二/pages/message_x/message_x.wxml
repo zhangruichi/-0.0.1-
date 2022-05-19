@@ -1,0 +1,34 @@
+<!--pages/message_x/message_x.wxml-->
+<wxs module="m1">
+  function format(ts) {
+    var d = getDate(ts)
+    var h=d.getHours();
+    h=h<10?('0'+h):h;
+    var m=d.getMinutes();
+    m=m<10?('0'+m):m;
+    var s=d.getSeconds();
+    s=s<10?('0'+s):s;
+    return [d.getFullYear(), d.getMonth()+1, d.getDate()].join('-')
+      + ' '
+      + [h,m,s].join(':')
+  }
+  module.exports.format = format
+</wxs>
+
+<view plain="true" style="position: fixed;border-bottom: solid #232531; background-color: #161824;color: #ffffff;font-size: 25px;display: flex;height: 120px; ">
+        <view style="width: 200rpx;height: 200rpx;">
+            <image src="{{image}}" style="margin-top: 15%;margin-left: 15%;width: 70%; height: 70%;border-radius: 100px;"></image>
+        </view>
+        <view style="height: max-content;width: 550rpx;">
+            <view style="height: 30%;margin-top: 5%;color: #e5ebe3;overflow: hidden;text-overflow: ellipsis;white-space:nowrap;">{{name}}</view>
+            <view style="height: 10%; font-size: 15px;">
+                <text decode="{{true}}">&nbsp;&nbsp;{{m1.format(createtime)}}</text>
+            </view>
+        </view>
+    </view>
+    <view style="padding-top: 120px; border-bottom: solid #232531; background-color: #161824;color: #ffffff;font-size: 25px;display: flex;height: 5000rpx; ">
+    <view style="color:#84878e;height: 40%;margin-top: 0%;">
+    <text>{{message}}</text>
+    </view>
+    </view>
+    <button plain="true" style=" position: fixed; top: 10vh;left: 28vw; width: 250rpx;height: 70rpx; border: none;color: #000000; background-color: #ffffff;" bindtap="huifu_tap">回复消息</button>

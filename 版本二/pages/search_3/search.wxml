@@ -1,0 +1,21 @@
+<!--pages/search/search.wxml-->
+<view style="display: flex; margin-top: 1%;">
+    <view style="width: 80%; display: flex;flex-direction: row;border: 2px solid #b77388;border-radius: 50px;">
+        <image style="margin-top: 5px;margin-left: 5px; width: 20px;height: 20px;" src="../icons_1/search.png"></image>
+        <input type="text" style="width: 75%; height: 30px;" placeholder="请输入搜索的内容" bindinput="searchContent" bindconfirm="confirmSC"></input>
+    </view>
+    <text style="width: 20%;height: 30px;font-size: 20px; text-align: center; line-height: 30px; color: #b77388;" bindtap="cancaltap">取消</text>
+</view>
+
+<view wx:for="{{searchres}}" wx:key="index">
+  <view wx:if="{{item.zhuangtai==1}}" style="display: flex; border-radius: 8px; margin-top: 3px; border:2px solid #b77388">
+    <view style="width: 60%;">
+      <view>悬赏者称呼 ：{{item.name}}</view>
+      <view><text>联系方式 ：</text>{{item.contact}}</view>
+      <view style="width: 95%; color: #8bc34a;border:2px solid #8bc34a;border-radius: 10px;padding-left: 5%;"><text style="font-size: 20px; margin-left: 10%;">↓任务信息↓\n</text>{{item.info}}</view>
+    </view>
+    <view style="width: 40%;font-size: 60rpx;color:#b77388 ;display: flex; align-items: center;">
+      <view>悬赏金额：¥{{item.value}}</view>
+    </view>
+  </view>
+</view>
