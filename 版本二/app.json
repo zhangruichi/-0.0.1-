@@ -1,0 +1,63 @@
+{
+  "pages":[
+    "pages/index/demo1",
+    "pages/demo3/demo3",
+    "pages/information/information",
+    "pages/FaBu/FaBu",
+    "pages/find/find",
+    "pages/search/search",
+    "pages/about/about",
+    "pages/agreement/agreement",
+    "pages/map/map",
+    "pages/new/new",
+    "pages/com/com",
+    "pages/xiangqing/xiangqing",
+    "pages/person/person",
+    "pages/out/out",
+    "pages/readfabu/readfabu",
+    "pages/index_2/index",
+    "pages/fabu_2/fabu",
+    "pages/search_2/search",
+    "pages/xiangqing_1/xiangqing_1",
+    "pages/xiangqing_2/xiangqing_2",
+    "pages/index_3/index",
+    "pages/fabu_3/fabu",
+    "pages/search_3/search",
+    "pages/chakan/chakan",
+    "pages/chakan_2/chakan_2",
+    "pages/chakan_3/chakan_3",
+    "pages/chankan_4/chakan_4",
+    "pages/chakan_5/chakan_5",
+    "pages/ji/ji",
+    "pages/message_x/message_x",
+    "pages/message/message"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e0f00a",
+    "navigationBarTitleText": "地大通",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/demo1",
+      "text": "主页",
+      "iconPath": "resourse/home.png",
+      "selectedIconPath": "resourse/home_clicked.png"
+    },
+  {
+    "pagePath": "pages/demo3/demo3",
+      "text": "我的",
+      "iconPath": "resourse/my.png",
+      "selectedIconPath": "resourse/my_clicked.png"
+  }
+  ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
